@@ -119,14 +119,14 @@ for R in range(3,8):
 	sum = 0
 	for i in range(len(arr)):
 		for j in range(len(arr)):
-			sum += arr[i][j]
+			sum += arr[i][j]**2
 
 	arr_inv = np.array([])
 	arr_inv = np.linalg.inv(arr)
 	sum_inv = 0
 	for i in range(len(arr_inv)):
 		for j in range(len(arr_inv)):
-			sum_inv += arr_inv[i][j]
+			sum_inv += arr_inv[i][j]**2
 
 	if (sum**0.5)*(sum_inv**0.5) < 100:
 		cond = "WELL"
